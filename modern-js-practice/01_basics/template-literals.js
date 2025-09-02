@@ -40,7 +40,7 @@ let LastName = "Doe";
 console.log(
   "Hi! My first name is " + FirstName + " and my last name is " + LastName + "!"
 );
-s
+
 // output
 
 // Hi! My first name is John and my last name is Doe!
