@@ -13,7 +13,7 @@
 // In the following example, each number in an array is doubled.
 
 const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(item => item * 2);
+const doubled = numbers.map((item) => item * 2);
 console.log(doubled); // [2, 4, 6, 8]
 
 // Filter
@@ -34,23 +34,21 @@ console.log(doubled); // [2, 4, 6, 8]
 // In the following example, odd numbers are "filtered" out, leaving only even numbers.
 
 const numBers = [1, 2, 3, 4];
-const evens = numbers.filter(item => item % 2 === 0);
+const evens = numbers.filter((item) => item % 2 === 0);
 console.log(evens); // [2, 4]
-
 
 // In the next example, filter() is used to get all the students whose grades are greater than or equal to 90.
 
-
 const students = [
-  { name: 'Quincy', grade: 96 },
-  { name: 'Jason', grade: 84 },
-  { name: 'Alexis', grade: 100 },
-  { name: 'Sam', grade: 65 },
-  { name: 'Katie', grade: 90 }
+  { name: "Quincy", grade: 96 },
+  { name: "Jason", grade: 84 },
+  { name: "Alexis", grade: 100 },
+  { name: "Sam", grade: 65 },
+  { name: "Katie", grade: 90 },
 ];
 
-const studentGrades = students.filter(student => student.grade >= 90);
-console.log(studentGrades)
+const studentGrades = students.filter((student) => student.grade >= 90);
+console.log(studentGrades);
 return studentGrades; // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ]
 
 // Reduce
@@ -61,8 +59,7 @@ return studentGrades; // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grad
 
 // arr.reduce(callback[, initialValue])
 
-
-// The callback argument is a function that will be called once for every item in the array. 
+// The callback argument is a function that will be called once for every item in the array.
 // This function takes four arguments, but often only the first two are used.
 
 // accumulator - the returned value of the previous iteration
@@ -83,19 +80,18 @@ console.log(sum); // 10
 //  Notice this call to reduce passes an empty object {} as the initialValue parameter.
 //  This will be used as the initial value of the accumulator (the first argument) passed to the callback function.
 
+var pets = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
 
-var pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
-
-var petCounts = pets.reduce(function(obj, pet){
-    if (!obj[pet]) {
-        obj[pet] = 1;
-    } else {
-        obj[pet]++;
-    }
-    return obj;
+var petCounts = pets.reduce(function (obj, pet) {
+  if (!obj[pet]) {
+    obj[pet] = 1;
+  } else {
+    obj[pet]++;
+  }
+  return obj;
 }, {});
 
-console.log(petCounts); 
+console.log(petCounts);
 
 /*
 Output:
