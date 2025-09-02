@@ -9,7 +9,6 @@ console.log("Original array:", arr); // [1, 2, 3]
 // Before the Spread Operator
 // Traditionally, if we wanted to create a new array with existing elements appended to it, we'd resort to cumbersome approaches like this:
 
-
 const newArr = [5, 6, arr[0], arr[1], arr[2]];
 console.log("New array (before spread operator):", newArr); // [5, 6, 1, 2, 3]
 
@@ -42,13 +41,12 @@ console.log("Combined array:", combined); // [1, 2, 3, 4, 5, 6]
 //  Instead of specifying each argument individually, we can use the spread operator to unpack an array of values into function parameters.
 
 function sum(a, b, c) {
-    return a + b + c;
+  return a + b + c;
 }
 
 const nums = [1, 2, 3];
 const result = sum(...nums);
 console.log("Result of sum:", result); // 6
-
 
 // This technique enhances function flexibility and reduces redundancy, especially when dealing with dynamic inputs.
 
@@ -59,7 +57,6 @@ console.log("Result of sum:", result); // 6
 const original = [1, 2, 3];
 const copy = [...original];
 console.log("Copied array:", copy); // [1, 2, 3]
-
 
 // Unlike traditional methods like slice() or concat(), the spread operator provides a more intuitive and readable approach to array duplication.
 
@@ -81,7 +78,6 @@ const rest = Arr.slice(1); // Collecting the rest of the elements
 console.log("First element:", first); // 1
 console.log("Rest of the elements:", rest); // [2, 3, 4, 5]
 
-
 // In the above example, first captures the initial element (1) by directly accessing it at index 0, while rest is obtained by slicing the array from index 1 onwards.
 //  This manual approach is prone to errors and less intuitive compared to using the rest operator.
 
@@ -97,22 +93,20 @@ console.log("Rest of the elements:", Rest); // [2, 3, 4, 5]
 
 // Rest Operator Use Cases
 // Handling Variable-Length Function Arguments
-// The rest operator simplifies the handling of variable-length arguments in functions. 
+// The rest operator simplifies the handling of variable-length arguments in functions.
 // It allows functions to accept an indefinite number of arguments without explicitly specifying each one.
 
 function sum(...numbers) {
-    return numbers.reduce((total, num) => total + num, 0);
+  return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.log("Sum:", sum(1, 2, 3, 4, 5)); // Sum: 15
 console.log("Sum:", sum(10, 20)); // Sum: 30
 
-
 // The ...numbers syntax collects all passed arguments into an array named numbers, enabling flexible function definitions.
 
 // Array Destructuring
 // The rest operator is commonly used in array destructuring to capture remaining elements into a separate array variable.
-
 
 const [fIrst, second, ...rEst] = [1, 2, 3, 4, 5];
 console.log("First element:", fIrst); // First element: 1
