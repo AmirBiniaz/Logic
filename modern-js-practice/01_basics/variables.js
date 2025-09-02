@@ -3,7 +3,7 @@
 // 3- developers shouldn't use var anymore. They should use let or const instead.
 // 4- if you're not going to change the value of a variable, it is good practice to use const.
 
-// var vs let vs const – What's the Difference? 
+// var vs let vs const – What's the Difference?
 
 // Scope of variables
 // Redeclaration and reassignment
@@ -11,7 +11,7 @@
 
 // How to Declare Variables with var in JavaScript
 
-// var num = 20; 
+// var num = 20;
 // function print() {
 //   var square = num * num;
 //   console.log(square);
@@ -20,7 +20,6 @@
 // print();
 
 // The number variable has a global scope – it's declared outside functions in the global space – so you can access it everywhere (inside and outside functions).
-
 
 // Let's see an example of local scope:
 
@@ -50,7 +49,7 @@
 //  and an initial value 50. If an initial value is not provided,
 //  the default value will be undefined:
 
-// var num 
+// var num
 
 // console.log(num);
 // undefined
@@ -58,7 +57,6 @@
 // The var keyword allows for redeclaration.
 
 //  Here's an example:
-
 
 // var num = 50;
 // console.log(num);
@@ -68,9 +66,8 @@
 // console.log(num);
 // 100
 
-// As you can see, 
+// As you can see,
 // we have redeclared the variable number using the var keyword and an initial value of 100.
-
 
 // The var keyword also allows for reassignment. In the code var number = 50, we assigned the 50 value to number.
 //  We can reassign another value anywhere in the code since it was declared with var. Here's what I mean:
@@ -91,9 +88,8 @@
 //  After declaring the first time with an initial value of 50,
 //  we reassign a new value of 100 and later on with a new value of 200.
 
-
 // How to hoist variables declared with var
-// Variables declared with var are hoisted to the top of their global or local scope, 
+// Variables declared with var are hoisted to the top of their global or local scope,
 // which makes them accessible before the line they are declared. Here's an example:
 
 // console.log(num); // undefined
@@ -131,8 +127,6 @@
 // There are some problems with var, which we'll discuss at the end.
 //  Just know that it's generally not advisable to use it in your modern JavaScript projects.
 
-
-
 // How to Declare Variables with let in JavaScript
 
 // You can find blocks in if, loop, switch, and a couple of other statements.
@@ -146,7 +140,7 @@
 //   let square = num * num;
 //   if (num < 60) {
 //     var largerNumber = 90;
-//     let anotherLargerNumber = 100; 
+//     let anotherLargerNumber = 100;
 //     console.log(square);
 //   }
 //   console.log(largerNumber);
@@ -155,7 +149,6 @@
 // }
 
 // print();
-
 
 // In this example, we have a global scope variable number and a local scope variable square.
 //  There's also block scope variable anotherLargerNumber because it is declared with let in a block.
@@ -169,10 +162,10 @@
 
 // How to redeclare and reassign variables declared with let
 
-// Just like var, variables declared with let can be reassigned to other values, 
+// Just like var, variables declared with let can be reassigned to other values,
 // but they cannot be redeclared. Let's see a reassignment example:
 
-// let num = 50; 
+// let num = 50;
 // console.log(num) // 50
 
 // let num = 100;
@@ -182,22 +175,20 @@
 // But redeclaring a variable with let will throw an error:
 
 // let num = 100;
-// let num = 50; 
+// let num = 50;
 // SyntaxError: Identifier 'number' has already been declared
-
 
 // You see we get a syntax error: Identifier 'number' has already been declared.
 
 // How to hoist variables declared with let
 
-// Variables declared with let are hoisted to the top of their global, local, 
+// Variables declared with let are hoisted to the top of their global, local,
 // or block scope, but their hoisting is a little different from the one with var.
-// var variables are hoisted with a default value of undefined, 
+// var variables are hoisted with a default value of undefined,
 // which makes them accessible before their line of declaration (as we've seen above).
-// But, let variables are hoisted without a default initialization. 
+// But, let variables are hoisted without a default initialization.
 // So when you try to access such variables, instead of getting undefined, or variable is not defined error, you get cannot access variable before initialization.
 //  Let's see an example:
-
 
 // console.log(num);
 // ReferenceError: Cannot access 'number' before initialization
@@ -205,7 +196,7 @@
 // let num = 50
 
 // Here, we have a global variable, number declared with let.
-//  By trying to access this variable before the line of declaration, we get ReferenceError: 
+//  By trying to access this variable before the line of declaration, we get ReferenceError:
 // Cannot access 'number' before initialization.
 
 // Here's another example with a local scope variable:
@@ -218,18 +209,10 @@
 // print()
 // ReferenceError: Cannot access 'number' before initialization
 
-
 // Here we have a local scope variable, number, declared with let.
 // By accessing it before the line of declaration again, we get the cannot access 'number' before initialization reference error
 
-
-
-
-
-
-
 // How to Declare Variables with const in JavaScript
-
 
 // The scope of variables declared with const
 // Variables declared with const are similar to let in regards to scope.
@@ -241,7 +224,7 @@
 //   const square = num * num;
 //     if (num < 620) {
 //     var largerNumber = 900;
-//     const anotherLargerNumber = 1000; 
+//     const anotherLargerNumber = 1000;
 //     console.log(square);
 //   }
 //   console.log(largerNumber);
@@ -251,7 +234,6 @@
 
 // print()
 //  ReferenceError: anotherLargerNumber is not defined
-
 
 // This is from our previous example, but I've replaced let with const.
 //  As you can see here, the number variable has a global scope, square has a local scope (declared in the print function),
@@ -263,11 +245,9 @@
 // Because anotherLargeNumber has a block scope,
 //  accessing it outside the block throws an anotherLargerNumber is not defined.
 
-
-
 // How to redeclare and reassign variables declared with const
 
-// In this regard, const is different from var and let. 
+// In this regard, const is different from var and let.
 // const is used for declaring constant variables – which are variables with values that cannot be changed.
 // So such variables cannot be redeclared, and neither can they be reassigned to other values.
 //  Attempting such would throw an error.
@@ -279,18 +259,16 @@
 // const num = 100;
 // SyntaxError: Identifier 'number' has already been declared
 
-
 // Here, you can see the Identifier has already been declared syntax error.
 
 // Now, let's see an example with reassignment:
 
 // const num = 100;
- 
+
 // num = 299;
 // TypeError: Assignment to constant variable
 
 // Here, you can see the Assignment to constant variable type error.
-
 
 // How to hoist variables declared with const
 // Variables declared with const, just like let,
@@ -307,20 +285,18 @@
 
 // const num = 100;
 
-
 // Here, number is a globally scoped variable declared with const.
 //  By trying to access this variable before the line of declaration,
 //  we get ReferenceError: Cannot access 'number' before initialization.
 //  The same will occur if it was a locally scoped variable.
 
-
 // Wrap up
 
 // Here's a table summary showing the differences between these keywords:
 
-// Keyword = var , let , const 
-// Scope = var = Global, Local , let = Global, Local, Block	, const = Global, Local, Block	
-// Redeclaration & Reassignment = var = yes & yes	 , let = no & yes	 , const = no & no	
+// Keyword = var , let , const
+// Scope = var = Global, Local , let = Global, Local, Block	, const = Global, Local, Block
+// Redeclaration & Reassignment = var = yes & yes	 , let = no & yes	 , const = no & no
 // Hoisting = var = yes, with default value , let = yes, without default value , const = yes, without default value
 
 // These factors I've explained, play a role in determining how you declare variables in JavaScript.
