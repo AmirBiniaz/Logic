@@ -35,7 +35,4 @@ console.log("Subtract:", subtract(10, 5)); // 5
 console.log("Multiply:", multiply(10, 5)); // 50
 console.log("Divide:", divide(10, 5));     // 2
 
-	// •	Make sure your Node.js version ≥ 14 or "type": "module" is in package.json to use ES modules.
-	// •	You can also export all at once:
 
-export { add, subtract, multiply, divide };
