@@ -27,6 +27,9 @@ operatives.forEach(function (operative) {
 var listHasPilots = operatives.some(function (operative) {
   return operative.pilot;
 });
+	// some checks all members of operatives.
+	// When it finds Alex with pilot: true → result is true.
+	// Since some only needs one match, it stops early.
 
 // How does it work?
 // Well, you pass .some() a function as the argument.
